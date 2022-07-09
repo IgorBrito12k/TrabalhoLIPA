@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard/Lipa</title>
+    <!-- CSS link-->
+    <link rel="stylesheet" href="styleDashboard.css">
+</head>
+
+<body>
+    <section id="dashboard">
+        <header>
+            <nav>
+                <div class="navigation">
+                    <div class="sidebar-brand">
+                        <img src="logo.svg" alt="logo com o texto LIPA">
+                    </div>
+                    <ul>
+                        <li class="list active">
+                            <b></b>
+                            <b></b>
+                            <a href="#dashboard">
+                                <span class="icon">
+                                    <ion-icon name="home"></ion-icon>
+                                </span>
+                                <span class="title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Perfil">
+                                <span class="icon">
+                                    <ion-icon name="person"></ion-icon>
+                                </span>
+                                <span class="title">Perfil</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Serviços">
+                                <span class="icon">
+                                    <ion-icon name="briefcase"></ion-icon>
+                                </span>
+                                <span class="title">Serviços</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Orçamento">
+                                <span class="icon">
+                                    <ion-icon name="cash"></ion-icon>
+                                </span>
+                                <span class="title">Orçamento</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Agenda">
+                                <span class="icon">
+                                    <ion-icon name="calendar"></ion-icon>
+                                </span>
+                                <span class="title">Agenda</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Configurações">
+                                <span class="icon">
+                                    <ion-icon name="settings"></ion-icon>
+                                </span>
+                                <span class="title">Configurações</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <b></b>
+                            <b></b>
+                            <a href="#Logout">
+                                <span class="icon">
+                                    <ion-icon name="log-out"></ion-icon>
+                                </span>
+                                <span class="title">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="toggle">
+                <ion-icon name="menu" class="open"></ion-icon>
+                <ion-icon name="close" class="close"></ion-icon>
+            </div>
+            <!-- Fonte dos Icones-->
+            <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+            <!-- Js Link-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <!---customizar arquivo--->
+            <script src="animaçãoBarra.js"></script>
+            <div class="dashboard">
+                <p class="nome">Olá, igor!</p>
+                <h1 class="nome1"> Serviços</h1>
+            </div>
+            <div class="Item1">
+                <ul>
+                    <span class="limpeza">Limpeza de estofado</span>
+                    <img class="sofa" src="Sofa.png">
+                </ul>
+            </div>
+            <div class="Item2">
+                <ul>
+                    <span class="lavagem">Lavagem de tapetes</span>
+                    <img class="tapete" src="tapete.png">
+                </ul>
+            </div>
+            <div class="Item3">
+                <ul>
+                    <span class="Otservico">Outros serviços</span>
+                    <img class="mais" src="mais.png">
+                </ul>
+            </div>
+            <!---Calendário--->
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span class="month-picker" id="month-picker">Fevereiro</span>
+                    <div class="year-picker">
+                        <span class="year-change" id="prev-year">
+                            <pre><</pre>
+                        </span>
+                        <span id="year">2022</span>
+                        <span class="year-change" id="next-year">
+                            <pre>></pre>
+                        </span>
+                    </div>
+                </div>
+                <p class="calendarionome">Consulte as datas disponíveis</p>
+                <div class="calendar-body">
+                    <div class="calendar-week-day">
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sab</div>
+                        <div>Dom</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <div>7</div>
+                    </div>
+                </div>
+                <div class="calendar-rodape">
+                    <div class="agendar">
+                        <span class="agendartxt">agendar</span>
+                    </div>
+                    <div class="cancelar">
+                        <span class="cancelartxt">Cancelar</span>
+                    </div>
+                </div>
+                <div class="month-list"></div>
+                <script src="calendario.js"></script>
+        </header>
+    </section>
+</body>
+
+</html>

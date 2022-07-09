@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIPA</title>
+    <style>
+        body {
+            background-image: url(LIPA-background.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            position: absolute;
+            width: 100%;
+            height: 42px;
+            left: 10px;
+            top: 5px;
+            }
+
+        h1 {
+            padding-top: 10%;
+            padding-right: 5%;
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 72px;
+            display: flex;
+            align-items: center;
+
+            color: #7E93FF;
+        }
+
+        p {
+            
+            width: 85%;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 38px;
+            /* or 175% */
+            color: #889FFF;
+
+        }
+
+            .navbar {
+                height: 45px;
+                width: 100%;
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                max-width: 100%;
+                margin: 0px 0px;
+                position: absolute;
+                width: 100%;
+                height: 207px;
+                left: 0px;
+                top: 1658px;
+                background: #FFFFFF;
+                
+                }
+                
+
+            
+
+            .madeBy{
+                position: fixed;
+                padding: 10px 10px 0px 10px;
+                bottom: 0;
+                width: 100%;
+                
+                height: 20px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                color: #889FFF;
+            }
+
+            .map{
+                width: 55%;
+                float: left;
+                padding-left: 5%;
+               
+            }
+
+            .contact {
+                width: 35%;
+                float: right;
+                padding-right: 5%;
+                padding-top: 2%;
+            }
+         
+            .logo {
+                
+                align-self: flex-start;
+                padding-left: 5%;
+            }
+
+            .text {
+                width: 55%;
+                float: left;
+                padding-left: 5%;
+               
+            }
+
+            .graficos {
+                width: 35%;
+                float: right;
+                padding-right: 5%;
+                padding-top: 2%;
+            }
+
+            .botoes {
+                width: 473px;
+                height: 60px;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                color: #7E93FF;
+                position: relative;
+                padding-top: 5%;
+
+            }
+
+            .button{
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                text-emphasis-color: #8198FF;
+            }
+
+            button.active,button:hover{
+            
+            /* Frame 4 */
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 8px 40px;
+            gap: 8px;
+            width: 140px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 24px;
+            /* Inside auto layout */
+            flex: none;
+            order: 3;
+            flex-grow: 0;
+            text-decoration: none;
+
+            /* Start now */
+            width: auto;
+            height: 24px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+            display: flex;
+            align-items: center;
+
+            color: #8198FF;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+            transition: .5s;
+            }
+
+            .testimonials{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100%;
+            margin: 0px 0px;
+
+            position: absolute;
+            width: 100%;
+            height: 797px;
+            left: 0px;
+            top: 678px;
+
+            background: #F3FBFF;
+        }
+
+        .Testimonials_title{
+    
+            /*max-width: 900px;
+            margin-left: 5%;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            text-align: left;*/
+
+            position: absolute;
+            width: 736.46px;
+            height: 139px;
+            left: 154.29px;
+            top: 0px;
+          
+
+            /* Headings/Text XXL */
+
+
+            
+
+        }
+
+       
+
+        .Testimonials_title>p {
+            
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 72px;
+            /* or 150% */
+
+            display: flex;
+            align-items: center;
+
+            color: #8198FF;
+
+        }
+
+
+        .testimonials_container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-top: 50px;
+        }
+
+
+        .testimonials_container_center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonials_content {
+            position: relative;
+            transition: all .3s ease-in-out;
+            transform: scale(0.9);
+            opacity: 0.9;
+        }
+
+        .testimonials_avatar {
+            position: absolute;
+            left: 50px;
+            right: 262px;
+            
+            bottom: 10px;
+
+            width: 50px;
+            float: right;
+
+        }
+
+        .testimonials_avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            
+            box-shadow: 0 9px 26px rgba(58, 87, 135, 0.1);
+            
+
+            
+        }
+
+        .testimonials_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 40px 40px;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 1ps solid #f1f1f1;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+            width: 270px;
+            height: 216px;
+
+            /* Paragraphs/Text M */
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            /* or 150% */
+
+
+            color: #7E93FF;
+        }
+
+        .testimonials_text_after {
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            position: absolute;
+            color: #BEDAFF;
+            opacity: .3;
+            font-size: 35px;
+            transition: all 400ms linear;
+            bottom: 25px;
+            right: 30px;
+        }
+
+        .testimonials_text_before {
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            position: absolute;
+            color: #BEDAFF;
+            opacity: .3;
+            font-size: 35px;
+            transition: all 400ms linear;
+            top: 25px;
+            left: 30px;
+        }
+
+
+        .testimonials_text p {
+            color: var(--second-color);
+            font-size: 14px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-style: italic;
+            line-height: 24px;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .testimonials_information{
+            
+            width: 100%;
+            height: 30%;
+            padding-bottom: 10px;
+            
+       
+            
+        }
+
+        
+
+        .testimonials_information h3 {
+       
+            font-weight: 700;
+            font-size: 19px;
+            color: #889FFF;
+            margin: 0%;
+            line-height: 16px;
+            padding-bottom: 3px;
+            
+            
+        }
+
+        .testimonials_information h4 {
+            font-weight: 400;
+            font-size: 12px;
+            color: #8198FF;
+            margin: 0%;
+            line-height: 15px;
+        }
+
+        .testimonials_container_center .active {
+            opacity: 1;
+            transform: scale(1.0);
+            width: 100%;
+            flex-grow: 6;
+        }
+
+        .testimonials_container_center .active .testimonials_text {
+            background: #FFFFFF;
+            box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+        }
+
+        .listing-carousel-button {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            cursor: pointer;
+            background:#8198FF;
+           
+            transition: all 200ms linear;
+            outline: none;
+        }
+
+        .listing-carousel-button.listing-carousel-button-next {
+            padding-right: 10px;
+            border-radius: 60px 60px 60px 60px;
+        }
+
+        .listing-carousel-button.listing-carousel-button-prev {
+            padding-left: 10px;
+            border-radius: 60px 60px 60px 60px;
+        }
+
+        .listing-carousel-button.listing-carousel-button-next:hover {
+            right: -15px;
+            background: rgba(6, 27, 65, 0.4);
+        }
+
+        .listing-carousel-button.listing-carousel-button-prev:hover {
+            left: -15px;
+            background: rgba(6, 27, 65, 0.4);
+        }
+
+       
+            nav ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px;
+                gap: 40px;
+
+                position: absolute;
+                left: 59.8%;
+                right: 0%;
+                top: 2.38%;
+                bottom: 2.38%;
+            }
+            nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+            }
+            nav ul li a{
+                /*width: 150px;*/
+                height: 28px;
+
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 28px;
+                /* identical to box height, or 175% */
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                color: #8198FF;
+
+
+                /* Inside auto layout */
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+
+            }
+            a.active,a:hover{
+            
+            /* Frame 4 */
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 8px 40px;
+            gap: 8px;
+            width: 140px;
+            height: 40px;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 24px;
+            /* Inside auto layout */
+            flex: none;
+            order: 3;
+            flex-grow: 0;
+            text-decoration: none;
+
+            /* Start now */
+            width: auto;
+            height: 24px;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+            display: flex;
+            align-items: center;
+
+            color: #8198FF;
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+            transition: .5s;
+            }
+
+            .checkButton{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+            }
+
+            
+            
+
+        #botao1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 56px;
+            gap: 8px;
+            float: left;
+            
+
+            width: 230px;
+            height: 60px;
+
+            background: #BEDAFF;
+            border: 2px solid #96B6FF;
+            border-radius: 56px;
+            color: #8198FF;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration-color: #8198ff;
+            line-height: 28px;
+        }
+
+        #botao2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 56px;
+            gap: 8px;
+            background: #FFFFFF;
+            float: right;
+
+            width: 219px;
+            height: 60px;
+
+            border: 2px solid #96B6FF;
+            border-radius: 56px;
+            
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            text-decoration-color: #8198ff;
+            line-height: 28px;
+            color: #8198FF;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+            <nav>
+                <img src="logo.svg" class="logo" alt="logo com o texto LIPA">
+                <ul>
+                    <li><a href="">Para o prestador</a></li>
+                    <li><a href="">Para o cliente</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="../lipa-lara/Login.html">Login</a></li>
+                </ul>
+              </nav>
+        
+    </div>
+   
+    <div class="content">
+        <div class="text">
+            <h1>LIPA - Serviços a Domicílio</h1>
+            <p>Um sistema que ajuda o cliente e o prestador a terem um serviço de qualidade e com facilidade.
+            </p>
+            <div class="botoes">
+                <button id="botao1" onclick="location.href='../lipa-lara/cadastro.html'">Cadastre-se</button>
+                <button id="botao2">Saiba mais</button> 
+            </div>
+            
+         </div>
+
+        <div class="graficos">
+            <img src="graficos.svg" alt="imagens de gráficos">
+       </div>
+
+
+    </div>
+
+
+        <div class="testimonials">
+            <div class="Testimonials_title">
+               
+                <p>Um sistema para ajudar a prestação e o agendamento</p>
+            </div>
+            <div class="testimonials_container">
+                <div class="testimonials_container_left">
+                    <div class="listing-carousel-button listing-carousel-button-prev">
+                        <img src="arrow-left.svg" style="height: 50px; width: 40px;" > 
+                        <i class="fa fa-caret-left"
+                            style="color: #fff"></i>
+                            
+                        </div>
+                </div>
+
+                <div class="testimonials_container_center">
+                    <div class="testimonials_content">
+                        
+
+                        <div class="testimonials_text_before"><i class="fa fa-quote-right"></i></div>
+
+                        <div class="testimonials_text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                            <div class="testimonials_information">
+                                <div class="testimonials_avatar">
+                                    <img src="alice-avatar.jpeg" alt="">
+                                </div>
+                                <div style="float: right; width: 72%; height: 100%;">
+                                    <h3>John Doe</h3>
+                                    <h4>Owner</h4>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="testimonials_text_after"><i class="fa fa-quote-left"></i></div>
+                    </div>
+
+                    <div class="testimonials_content active">
+                        
+
+                        <div class="testimonials_text_before"><i class="fa fa-quote-right"></i></div>
+
+                        <div class="testimonials_text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+                            <div class="testimonials_information">
+                                <div class="testimonials_avatar">
+                                    <img src="igor-avatar.jpeg" alt="">
+                                </div>
+                                <div style="float: right; width: 72%; height: 100%;">
+                                    <h3>Igor</h3>
+                                    <h4>Cliente</h4>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="testimonials_text_after"><i class="fa fa-quote-left"></i></div>
+                    </div>
+
+                    <div class="testimonials_content">
+                        
+
+                        <div class="testimonials_text_before"><i class="fa fa-quote-right"></i></div>
+
+                        <div class="testimonials_text">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            </p>
+
+                            <div class="testimonials_information">
+                                <div class="testimonials_avatar">
+                                    <img src="lara-avatar.jpeg" alt="">
+                                </div>
+                                <div style="float: right; width: 72%; height: 100%;">
+                                    <h3>Lara Prates</h3>
+                                    <h4>Prestadora</h4>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="testimonials_text_after"><i class="fa fa-quote-left"></i></div>
+                    </div>
+                </div>
+
+                <div class="testimonials_container_right">
+                    <div class="listing-carousel-button listing-carousel-button-next">
+                        <img src="arrow-right.svg" style="height: 50px; width: 40px; padding-left: 10px;" > 
+                        <i class="fa fa-caret-right"
+                            style="color: #fff"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <footer>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14919.7717901889!2d-49.3998422!3d-20.7935959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62eba8406bb0e126!2sFatec%20-%20Faculdade%20de%20Tecnologia%20de%20S%C3%A3o%20Jos%C3%A9%20do%20Rio%20Preto!5e0!3m2!1spt-BR!2sbr!4v1655816686351!5m2!1spt-BR!2sbr" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact">
+                    R. Fernandópolis, 2510 - Eldorado, São José do Rio Preto - SP, 15043-020 <br>
+                    http://www.fatecriopreto.edu.br/ <br>
+                    01732191433
+                </div>
+                
+            </footer>
+        </div>
+        <p class="madeBy">© 2022 LIPA</p>
+
+
+    
+</body>
+</html>
